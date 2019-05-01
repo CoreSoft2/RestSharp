@@ -4,7 +4,7 @@
       - master
 
   artifacts:
-    path: 'RestSharp\bin\Release\*.nupkg'
+    path: 'PivotSecurity\bin\Release\*.nupkg'
 
   configuration: Release
 
@@ -21,7 +21,7 @@
       - develop
 
   artifacts:
-    path: 'RestSharp\bin\Debug\*.nupkg'
+    path: 'PivotSecurity\bin\Debug\*.nupkg'
 
   configuration: Debug
 
