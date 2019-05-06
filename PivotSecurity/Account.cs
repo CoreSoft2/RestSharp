@@ -138,6 +138,16 @@ namespace PivotSecurity
             return response.Content;
 
         }
+        public string VerifySessio(string uid, string email, string sessionid)
+        {
+            var client = new RestClient("https://api.povotsecurity.com/api/");
+            var request = new RestRequest("account/verifysession");
+            client.Authenticator = new HttpBasicAuthenticator(private_key, "");
+            request.AddJsonBody("{\"uid\":\"" + uid + "\", \"email\":\"" + email + "\", \"sessionid\":\"" + sessionid + "\"}");
+            var response = client.Post(request);
+            return response.Content;
+
+        }
 
     }
 }
